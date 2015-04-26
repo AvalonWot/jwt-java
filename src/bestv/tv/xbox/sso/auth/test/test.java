@@ -1,0 +1,29 @@
+package bestv.tv.xbox.sso.auth.test;
+
+import bestv.tv.xbox.sso.auth.JWT;
+import bestv.tv.xbox.sso.auth.model.XSTSToken;
+
+public class test {
+
+	/**
+	 * @param args
+	 * @throws Exception 
+	 */
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		String encryptTokenSource = " XBL3.0 x=5381178999727281455;eyJlbmMiOiJBMTI4Q0JDK0hTMjU2IiwiYWxnIjoiUlNBLU9BRVAiLCJjdHkiOiJKV1QiLCJ6aXAiOiJERUYiLCJ4NXQiOiI4VmUyZ0x6NEZUYXZEN0xwV2psdXg2TTVZd2sifQ.hYOvo3BJqGXOFLIXaQkNwssLkSYdv8TjDKcEmrBjGhFku7TmGg3BekhUGNwDiReDwhGPvfYxikcLd38lj0kHxYq7_BU_yL0z5vTv5VckD0L7QORCftFA3JERobe7z7HoLzSM7LyyTR6yGAlMs-vHBF4drsjX-oWrkwo22nposlA1zkPC2NjTvNaQrmkz0qdWjKVl2jK2y-gxQXTAY5KGqQ0jWcg0Ne0_YvyyepY2SYCXTtctnNdeguXOJ3VJ0A5NWJrpPofH4AgFh5T2iLAeJR1Elf-prMLBFfBw5tv0rbEcY2HDrekRYWZ2WSQrRIAT3i_MqggPjwa3kB6vIcqHag.kM3aobqF1XjFLFvRh4FXOg.BGqHU0mtnLf_EMRUAvEiLwpdCP6ItVV4BOza-6i3pJDsLadd8XK09Wb_5vYregxdwWuIREOt55vZI655PWWandXKt193ZVSCKYg9TdkOJomoBkXCFI1PJHTg6_crtLyT6ZmOyv4sY2XbqdK1IpLkfzBr5lWO_S6bVV-FvzN3jNrIXLbVW1afF9sPrjYLQ1nUAqV804IJVIMYEdvRLnbVmq3gtrt2yIuPAB7i3xXtQItJ3MwbfEqKRLf382GaMJ8tJGdP76A_wMyZwjMs1kjGK4N1HJt0BoXEiB-bXFJLPEWXZEAm6S4euwggdQ2PVQpT0v3cTJcbQUfpJtnH7cB1fivYQrunZLxPIi6S2AoaY5XW0nYBPeMy5T1jC1luOowDsYQjsAdKgL4eflu8pNpsMX6U1TAygEJpxn_6ZLIFP2iiCRUVjVws8EAM5WiHLx94aXjFYpLwBHeIUYGoTzPUqdKrU__FHcioobgmDU9g1yHHwtVCseKNM1bHlPa6u1-kc0GiftcF7LmpnHtL-XWKvuGjIuoP52E9AC7ARk4tTT3CSafYHEiDti4zaO1x9AAZpHuRsSDJJyuiAhPaEJVOJuuPJIaP-zr8gfy_kYyf0ENehwayRLSIXZZdNzRbD5aic2iB3lHX1vnao7vUTuNGplIqugUOdc6ymxlbxsTpwttWeJM3yBL569-OGvL4-ZKIMmlDJGXNW5p6fGRVUePZi3V3fHa826UQ2ZJFLaRSRpdWsqYpsvb0HdBzDccNHphl89Q2KHAKhlkWKOYSljwFRAbKHM_O6f0jRhIY2rv3qlJa5uWKKFB-jg3JdVfmMHUdWxNF5o2vbZlJcQ-ym0VXWnnphuZ74IRq9dQ4W_G3IdxkX8I-chgoNfbYyYWsDd_Kd9GdlkPBOu00TkREQgDOqq59nuaDycIHwv7PoBlsmhcWH7vDaOW5Tl2vmFXA3A8YLlhmIhBc3fhWQ_l7KjntNGw4XribhEz_0myunb5C730vJpKrXPFlD8Q-H7H_RKRco-ZE-dXgblQZgbvbD8u1nKOHRV5PdtDiFTuil04w67h_5M1u7nRoJqtUCxNvXEyfNbZOQ0O51_Y3JZH8vq98womp78ahFwORS0m0hI8XtJgoa7j5cdCrobtZGNIs-8jeILztbbVZgFhGp-TYyLd_7Yy69MTyHFOgBaRvmFKMrHDfPKIAZ0ZU9fMjh5FDAIsY5jZToefGPiEDclNZpRwu8S-AMqqqli3-yPKzexCUJ0iTEJcnU_SJqMURWuJHlR3q.pKRsk9pEpMXAkNoUXmfzVjXRB6DKw4PROgw_WkyyiUg";
+//		String encryptTokenSource = "eyJlbmMiOiJBMTI4Q0JDK0hTMjU2IiwiYWxnIjoiUlNBLU9BRVAiLCJ4NXQiOiI4VmUyZ0x6NEZUYXZEN0xwV2psdXg2TTVZd2siLCJ6aXAiOiJERUYifQ.ByRJ6f-l_MWN3N8FHrkZc6WyZc7UIWmH77ZOICWMijZ2eoRviSL6j6W3LkJKHvsmwaEZS4l1uBH0OeAJ3Bn_Zw7ckeF41_wa6nBnwhDZc_IIcQgy1K2t2QpfBaXynvMzTVAp-NckMlgeec8VH9dDOPhuxRg_tupOt2VFuDg3WdcQdBpYaA5Rh1rpLtoElF3OcS5Tg9UoLTHgRUfi8Ipv8444Lj9qvx-uGQ99GdouAm7Ari0-j1PbvL-uRNKYAzKiJDl3sZe03EFbSeErm8N4M6OhKNZAJqDk1_TIdzLdEdEA7kBUC4Tw1zvdDJ7d-fqI6WXEZdO_5rWxDw1ShzLvqw.qSxxelqD1Oxe_x5VIOH3gQ.YWt0p7QBb6KQsBTz_bR-XR9NUSYe6Ch_HXxnpXPiC_k.rLv_hMqZFJhGRXSsa8bphmg4lDyljEKAB2JuG5nWVdQ";
+		String authorization = encryptTokenSource;
+//		String token = JWT.me().parseOOBEJWTString(authorization, false);
+//		String token = JWT.me().parseJWTString(authorization, false);
+		XSTSToken token = JWT.me().parseJWEString(authorization, false);
+//		System.out.println(token);
+		String deviceType = token.getXdi().getDeviceType();
+		String devicePairwiseID = token.getXdi().getDevicePairwiseID();
+		String userPairwiseID = token.getXui().get(0).getUserPairwiseID();
+		System.out.println("DeviceType:" + deviceType);
+		System.out.println("DevicePairwiseID:" + devicePairwiseID);
+		System.out.println("UserPairwiseID:" + userPairwiseID);
+	}
+
+}
